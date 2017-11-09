@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Btn_Next = (Button) findViewById(R.id.Btn_next);
     }
 
-    public void next (View view) {
+    public void nextAct (View view) {
         Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
         startActivity(intent);
     }
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void saveSharedPreference (View view) {
+    public void saveSharedPref (View view) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("data", etData.getText().toString());
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Preferences Saved!", Toast.LENGTH_SHORT).show();
     }
 
-    public void saveInternalStorage (View view) {
+    public void saveInternalStor (View view) {
         String message = etData.getText().toString();
         String filename = etFilename.getText().toString();
         try {
