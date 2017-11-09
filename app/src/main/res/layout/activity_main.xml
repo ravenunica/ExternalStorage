@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.unica.externalstorage.MainActivity"
+    android:background="#B2EBF2">
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data: "
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:layout_marginLeft="90dp"/>
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/tvData"/>
+    <TextView
+        android:id="@+id/tvFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filename: "
+        android:layout_marginTop="80dp"
+        android:textSize="15sp"
+        android:layout_marginLeft="90dp"/>
+    <EditText
+        android:id="@+id/etFilename"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_toRightOf="@+id/tvFilename" />
+    <Button
+        android:id="@+id/Btn_SharedPref"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveSharedPref"
+        android:layout_below="@+id/etFilename"
+        android:background="#00BCD4"
+        />
+    <Button
+        android:id="@+id/Btn_InternalStor"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Internal Storage"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveInternalStor"
+        android:layout_below="@+id/Btn_SharedPref"
+        android:background="#00BCD4"
+        />
+    <Button
+        android:id="@+id/Btn_intCache"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Internal Cache"
+        android:layout_below="@+id/Btn_InternalStor"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveInternalCache"
+        android:background="#00BCD4"
+        />
+    <Button
+        android:id="@+id/Btn_extCache"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="External Cache"
+        android:layout_below="@id/Btn_intCache"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveExternalCache"
+        android:background="#00BCD4"
+        />
+    <Button
+        android:id="@+id/Btn_extStor"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="External Storage"
+        android:layout_below="@id/Btn_extCache"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveExternalStorage"
+        android:background="#00BCD4"/>
+    <Button
+        android:id="@+id/Btn_extPub"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="External Public"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Btn_extStor"
+        android:onClick="saveExternalPublic"
+        android:background="#00BCD4"/>
+    <Button
+        android:id="@+id/Btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Btn_extPub"
+        android:onClick="nextAct"
+        android:background="#00BCD4"/>
+</RelativeLayout>
