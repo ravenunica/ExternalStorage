@@ -49,18 +49,18 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
-    public void previous (View view) {
+    public void backAct (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void loadSharedPreference(View view) {
+    public void readSharedPref(View view) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());;
         String data = preferences.getString("data","");
         tvData.setText(data);
     }
 
-    public void loadInternalStorage (View view) throws IOException {
+    public void readInternalStorage (View view) throws IOException {
         String newline = "";
         String data = "";
         try{
@@ -77,7 +77,7 @@ public class SecondActivity extends AppCompatActivity {
         tvData.setText(data);
     }
 
-    public void loadInternalCache(View view) throws FileNotFoundException {
+    public void readInternalCache (View view) throws FileNotFoundException {
         String newline = "";
         String data = "";
         File folder = getCacheDir();
@@ -96,7 +96,7 @@ public class SecondActivity extends AppCompatActivity {
         tvData.setText(data);
     }
 
-    public void loadExternalCache(View view) throws FileNotFoundException {
+    public void readExternalCache (View view) throws FileNotFoundException {
         String newline = "";
         String data = "";
         File folder = getExternalCacheDir();
@@ -115,7 +115,7 @@ public class SecondActivity extends AppCompatActivity {
         tvData.setText(data);
     }
 
-    public void loadExternalStorage (View view) throws FileNotFoundException {
+    public void readExternalStor (View view) throws FileNotFoundException {
         String newline = "";
         String data = "";
         File folder = getExternalFilesDir("<PANGALAN MO DITO>");
@@ -134,7 +134,7 @@ public class SecondActivity extends AppCompatActivity {
         tvData.setText(data);
     }
 
-    public void loadExternalPublic (View view) throws FileNotFoundException {
+    public void readExtPubStor (View view) throws FileNotFoundException {
         String newline = "";
         String data = "";
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
