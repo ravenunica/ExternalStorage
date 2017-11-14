@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void nextAct (View view) {
         Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+        intent.putExtra("filename", etFilename.getText().toString());
         startActivity(intent);
     }
 
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        Toast.makeText(this, "Storage saved!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Internal Storage saved!", Toast.LENGTH_SHORT).show();
     }
 
     public void saveInternalCache(View view){
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         File file = new File(folder, filename + ".txt");
         String message = etData.getText().toString();
         writeData(file, message);
-        Toast.makeText(this,"Successfully writtin to internal cache!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Successfully written to internal cache!", Toast.LENGTH_LONG).show();
     }
 
     public void saveExternalCache (View view) {
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveExternalStorage (View view) {
         String filename = etFilename.getText().toString();
-        File folder = getExternalFilesDir("<PANGALAN MO DITO>");
+        File folder = getExternalFilesDir("Roseleen");
         File file = new File(folder, filename + ".txt");
         String message = etData.getText().toString();
         writeData(file, message);
